@@ -1,0 +1,17 @@
+.feed  {
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+
+  .feed-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+
+
+    img {
+      width: 333px;
+      height: auto;
+    }
+  }
+}

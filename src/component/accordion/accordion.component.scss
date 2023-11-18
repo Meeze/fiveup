@@ -1,0 +1,13 @@
+.accordion {
+  display: flex;
+  flex-flow: column;
+  background: hotpink;
+  .accordion-label {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  .accordion-text {
+    display: none;
+  }
+
+}

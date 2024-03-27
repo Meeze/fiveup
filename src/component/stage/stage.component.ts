@@ -1,18 +1,18 @@
-import { Component } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {ButtonInterface} from "../ButtonInterface";
 
 @Component({
   selector: 'app-stage',
   templateUrl: './stage.component.html',
   styleUrls: ['./stage.component.scss']
 })
-export class StageComponent {
+export class StageComponent implements OnInit {
 
-  image: string = "assets/stage_bg_1.png"
+  image: string = "assets/stage.png"
+  @Input() buttons:ButtonInterface[] = [];
 
+  ngOnInit(): void {
 
-  public getRandomImage(count: number): string {
-    const a = Math.floor(Math.random() * count);
-    return `assets/stage_bg_${a}.png`
   }
 
 }

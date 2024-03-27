@@ -1,0 +1,21 @@
+.accordion {
+  display: flex;
+  flex-flow: column;
+  border: 1px lightslategrey solid;
+
+  .accordion-label {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 16px;
+    color: var(--text-color);
+    //border: 1px whitesmoke solid;
+    //border-bottom: none;
+  }
+  .accordion-text {
+    display: none;
+    margin-left: 24px;
+    margin-bottom: 16px;
+    color: var(--text-color);
+  }
+
+}

@@ -1,20 +1,61 @@
 /* You can add global styles to this file, and also import other style files */
+@import "style/variables";
+
+
 body {
   margin: unset;
   padding: unset;
+  color: var(--text-color);
+  font-size: var(--text-font);
+  outline: var(--title-color);
 }
 
 .container {
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
+
+  //background: cyan;
 }
 
-
-* {
-  font-size: x-large;
-}
 
 .show-me {
+  border: unset !important;
   display: revert !important;
 }
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.container-full {
+  width: 100%;
+  @media only screen and (min-width: 1025px) {
+
+  }
+}
+
+.container-app-medium {
+  padding: var(--small-margin);
+  margin-left: var(--container-margin-medium);
+  margin-right: var(--container-margin-medium);
+}
+
+.container-app-small {
+  padding: var(--small-margin);
+  margin-left: var(--container-margin-small);
+  margin-right: var(--container-margin-small);
+}
+
+
+.container-app-large {
+  padding: var(--small-margin);
+  margin-left: var(--container-margin-large);
+  margin-right: var(--container-margin-large);
+}
+
+.cool-bg {
+  background-image: url("~src/assets/bgtrans75.png");
+}
+

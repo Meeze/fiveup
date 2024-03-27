@@ -1,0 +1,11 @@
+.icon-link {
+  color: var(--text-color);
+  display: flex;
+  flex-flow: column;
+  gap: var(--build-unit);
+
+  img {
+    max-width: 256px;
+    max-height: 256px;
+  }
+}

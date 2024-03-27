@@ -1,0 +1,28 @@
+.social-counter-outer {
+
+  .social-counter-list {
+    gap: var(--small-margin);
+    display: flex;
+    @media only screen and (min-width: 1025px) {
+      flex-flow: row nowrap;
+    }
+    flex-flow: column;
+
+    .social-counter {
+      width: 100%;
+      @media only screen and (min-width: 1025px) {
+        width: 33%;
+      }
+    }
+  }
+
+  .social-counter-text {
+    text-align: center;
+    font-size: var(--title-font);
+    color: var(--title-color);
+    @media only screen and (min-width: 1025px) {
+      margin-bottom: var(--small-margin);
+    }
+  }
+
+}

@@ -1,8 +1,31 @@
 .faq {
-  margin-left: 10%;
-  margin-right: 10%;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  padding-bottom: var(--medium-margin);
+
+
+  .faq-accordion {
+
+    @media only screen and (min-width: 1025px) {
+      width: 65%;
+    }
+    border-radius: 4px;
+  }
+
+  .faq-image {
+    display: none;
+    @media only screen and (min-width: 1025px) {
+      max-width: 35%;
+      display: revert;
+      max-height: 600px;
+      align-self: center;
+    }
+  }
+
   .faq-title {
-    font-size: xx-large;
+    font-size: var(--title-font);
     text-align: center;
+    color: var(--title-color);
   }
 }

@@ -1,0 +1,35 @@
+.text-media {
+  display: flex;
+  flex-flow: column;
+
+  @media only screen and (min-width: 1025px) {
+   flex-flow: row nowrap;
+  }
+
+  .text-media-button {
+    max-width: 12.5vw;
+    margin-left: 33%;
+  }
+
+  .text-media-image__left {
+
+    @media only screen and (min-width: 1025px) {
+      max-width: 66%;
+    }
+  }
+
+  .text-media-image__right {
+    @media only screen and (min-width: 1025px) {
+      max-width: 66%;
+      padding-left: var(--small-margin)
+    }
+  }
+
+  .svg-text-media-icon {
+
+    @media only screen and (min-width: 1025px) {
+      width: 300px;
+    }
+
+  }
+}

@@ -1,3 +1,21 @@
-<div class="stage">
-  <img class="stage-image image-fullwidth" [src]="getRandomImage(2)">
+<div class="stage container-full">
+  <div class="stage-image">
+    <img [src]="image" alt=""/>
+    <div class="overlay overlay_0">
+      <div class="overlay_0--content">
+        <div class="stage-headline">5up - Coaching and Content</div>
+        <div class="stage-text">
+          <p>5up is a 10k MMR Dota 2 player who streams on Twitch and creates YouTube videos</p>
+          <p>He is renowned for his educational YouTube content and coaching sessions on Patreon</p>
+          <!--p>Currently, 5up is not a full-time content creator, but he aspires to become one in the future!</-p-->
+          <p>In his Dota 2 career he played profesionally for B8 with Dendi and Gorgc in Team Bald</p>
+        </div>
+        <div class="stage-cta">
+          @for (button of buttons; track button) {
+            <app-button class="stage-button" [btnType]="button.type" [btnLink]="button.link" [btnLabel]="button.label"></app-button>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

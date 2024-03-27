@@ -1,9 +1,83 @@
 .stage {
-  width: 100%;
 
-  .image-fullwidth {
+  margin-bottom: var(--small-margin);
+
+  &.-image {
+    position: relative;
+  }
+
+  img {
+    display: block;
+    object-fit: cover;
     width: 100%;
-    height: auto;
-    max-height: 100vh;
+    height: calc(100vh + 48px);
+  }
+
+  .overlay {
+    position: absolute;
+  }
+
+  .overlay_0 {
+    left: 12.5vw;
+    top: 12.5vh;
+    @media only screen and (min-width: 1025px) {
+      left: 8vw;
+      top: 25vh;
+      padding: .5rem;
+      margin: 4px;
+    }
+
+    &--content {
+      display: flex;
+      flex-flow: column;
+      width: calc(92vw - var(--medium-margin));
+      align-items: flex-start;
+
+      .stage-headline {
+        font-size: var(--title-font-mobile);
+        max-width: 87.5%;
+        color: var(--title-color);
+        font-weight: bold;
+
+        @media only screen and (min-width: 1025px) {
+          max-width: unset;
+          font-size: var(--title-font);
+        }
+      }
+
+      .stage-text {
+        max-width: 87.5%;
+        font-size: var(--text-font-mobile);
+        @media only screen and (min-width: 1025px) {
+          max-width: 45%;
+          font-size: var(--text-font);
+          font-weight: 500;
+        }
+      }
+
+      .stage-cta {
+        font-size: var(--text-font-mobile);
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        width: 87.5%;
+
+        .stage-button {
+          width: 66%;
+        }
+
+        @media only screen and (min-width: 1025px) {
+          flex-flow: row wrap;
+          justify-content: flex-start;
+          max-width: 45%;
+          font-size: var(--text-font);
+          gap: var(--small-margin);
+
+          .stage-button {
+            width: revert;
+          }
+        }
+      }
+    }
   }
 }

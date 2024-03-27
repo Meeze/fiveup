@@ -1,0 +1,33 @@
+.navbar {
+  display: none;
+  @media only screen and (min-width: 1025px) {
+    display: revert;
+    width: 100%;
+    background: transparent;
+    position: fixed;
+    height: var(--navbar-height);
+    padding-left: 15%;
+    border-bottom: solid 2px var(--nav-bottom-color);
+
+    .nav-points {
+      width: 66%;
+      list-style: none;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+
+      li {
+        font-weight: bold;
+        color: var(--title-color);
+        font-size: var(--nav-font);
+      }
+    }
+
+    .navbar-logo {
+      height: var(--navbar-height);
+      width: auto;
+      justify-self: left !important;
+    }
+
+  }
+}

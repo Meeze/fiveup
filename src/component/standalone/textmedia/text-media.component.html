@@ -1,0 +1,17 @@
+<div class="text-media">
+  <div class="svg-text-media-icon text-media-image__{{imgOrientation}}" *ngIf="imgOrientation === 'left'">
+    <img class="img-fluid" src="assets/coachingqop.png">
+  </div>
+  <div class="text-media--text" >
+    @for (item of lines; track item.toString()) {
+      <p>{{item}}</p>
+    }
+    <div class="text-media-button">
+      <app-button [btnType]="buttonType" [btnLink]="buttonUrl" [btnLabel]="buttonText"></app-button>
+    </div>
+  </div>
+  <div class="text-media-image__{{imgOrientation}}" *ngIf="imgOrientation === 'right'">
+    <img class="img-fluid" *ngIf="imgOrientation === 'right'" src="https://i.ytimg.com/vi/bkzD190Nk3w/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAI-0GXxCV_s9famMW3okMKRWaslQ">
+  </div>
+
+</div>

@@ -1,0 +1,18 @@
+.info-text {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: var(--large-margin);
+  margin-bottom: var(--large-margin);
+
+  .info-text--right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .info-text--left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

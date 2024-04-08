@@ -17,11 +17,15 @@ export class AccordionComponent {
   expandAccordionElement(id: number) {
     // @ts-ignore
     const list = document.getElementById(id).classList;
+    const accordion = document.getElementsByClassName(id.toString()).item(0);
     const className: string = "show-me";
+    const background: string = "accordion-bg-expanded";
     if (list.contains(className)) {
-      list.remove(className)
+      list.remove(className);
+      accordion?.classList.remove(background);
     } else {
-      list.add(className)
+      list.add(className);
+      accordion?.classList.add(background);
     }
   }
 }

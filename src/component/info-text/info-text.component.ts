@@ -9,7 +9,8 @@ import {TextMediaComponent} from "../standalone/textmedia/text-media.component";
 })
 export class InfoTextComponent {
 
-   textMediaRight: string[] = ['Come and Check out my youtube content', 'It is very good, high quality and i post weekly and stuff', 'Thats a free way to promote and support my growth']
-   textMediaLeft: string[] = ['Get profesional coaching on patreon or just support my content and watch', 'Im a high ranked immortal player and have coached and played profesionally', 'Many of my clients reach immortal or their respective goals quickly']
+   textMediaRight: string[] = ['Check out my youtube channel for tons of educational content', 'I post every week mostly sunday or the day after', 'Thats a free way for you to promote and support my growth']
+   textMediaLeft: string[] = ['Receive professional coaching on Patreon or support my content and watch', 'I\'m a high-ranking player with professional coaching and playing experience', 'Many clients quickly achieve Immortal or their respective goals']
+
 
 }

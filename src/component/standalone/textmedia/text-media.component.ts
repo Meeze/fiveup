@@ -15,10 +15,12 @@ export type imgOrient = 'left'|'right';
 export class TextMediaComponent {
 
   @Input() imgOrientation: imgOrient = 'right';
+  @Input() image: string = '';
   @Input() lines: string[] = [];
   @Input() buttonText: string = "";
   @Input() buttonUrl: string = "";
   @Input() buttonType: ButtonType = 'primary';
+  @Input() colorOverride: string = '';
 
   nav() {
     window.open('https://' + this.buttonUrl, "_blank");

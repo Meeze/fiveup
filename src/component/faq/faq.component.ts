@@ -6,14 +6,16 @@ import {Component} from '@angular/core';
   styleUrls: ['./faq.component.scss']
 })
 export class FaqComponent {
-  Hi = "hi";
+  bgClass = "accordion-bg-expanded";
+  showMeClass = "show-me";
+
 
   public openAll() {
-    let test = document.querySelectorAll('.accordion-text');
-    if (!test) {
+    let text = document.querySelectorAll('.accordion-text');
+    if (!text) {
       return
     }
-    test.forEach((value) => {
+    text.forEach((value) => {
       if (!value.classList.contains('show-me')) {
         value.classList.add('show-me')
       }
@@ -21,11 +23,11 @@ export class FaqComponent {
   }
 
   public closeAll() {
-    let test = document.querySelectorAll('.accordion-text');
-    if (!test) {
+    let text = document.querySelectorAll('.accordion-text');
+    if (!text) {
       return
     }
-    test.forEach((value) => {
+    text.forEach((value) => {
       if (value.classList.contains('show-me')) {
         value.classList.remove('show-me')
       }

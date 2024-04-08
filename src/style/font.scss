@@ -1,11 +1,12 @@
 :root {
   --title-font: 48px;
   --title-font-mobile: 40px;
-  --text-font: 24px;
+  --text-font: 26px;
   --text-font-mobile: 20px;
 
   font-family: Inter, sans-serif;
   font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+  font-weight: 500;
 
 }
 

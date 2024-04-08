@@ -25,7 +25,10 @@
 
   .faq-title {
     font-size: var(--title-font);
+    line-height: var(--title-font);
+    text-shadow: var(--text-outline-headline);
     text-align: center;
     color: var(--title-color);
+    margin-bottom: var(--medium-margin);
   }
 }

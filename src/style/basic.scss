@@ -1,10 +1,15 @@
 :root {
+  --primary-color: #FF7F50;
+  --secondary-color: #8d9db8;
+  --tertiary-color: #bdba0f;
   --build-unit: 8px;
   --border-radius: 8px;
   --bg-color: #000316;
-  --title-color: #FF7F50;
-  --text-color: #aac4f2;
-  --stage-text-color: #aac4f2;
+  --title-color: var(--primary-color);
+  --text-color: var(--secondary-color);
+  --text-outline-nav: -1px -1px 0 var(--bg-color), 1px -1px 0 var(--bg-color), -1px 1px 0 var(--bg-color), 1px 1px 0 var(--bg-color);
+  --text-outline-headline: -1px -1px 0 var(--bg-color), 1px -1px 0 var(--bg-color), -1px 1px 0 var(--bg-color), 1px 1px 0 var(--bg-color);
+  --stage-text-color: #89a6d6;
   --large-margin: 64px;
   --medium-margin: 32px;
   --small-margin: 16px;

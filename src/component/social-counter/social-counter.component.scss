@@ -19,6 +19,8 @@
   .social-counter-text {
     text-align: center;
     font-size: var(--title-font);
+    line-height: var(--title-font);
+    text-shadow: var(--text-outline-headline);
     color: var(--title-color);
     @media only screen and (min-width: 1025px) {
       margin-bottom: var(--small-margin);

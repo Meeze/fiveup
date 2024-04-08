@@ -1,5 +1,12 @@
 .feedback {
 
+  .feedback-header  {
+    text-align: center;
+    color: var(--title-color);
+    font-size: var(--title-font);
+    margin-bottom: var(--medium-margin);
+    text-shadow: var(--text-outline-headline);
+  }
   .feedback-images {
     display: flex;
     flex-flow: column;
@@ -7,7 +14,7 @@
     @media only screen and (min-width: 1025px) {
       gap: unset;
       flex-flow: row nowrap;
-      justify-content: space-evenly;
+      justify-content: space-between;
       .feedback-image {
         max-width: 30%;
       }

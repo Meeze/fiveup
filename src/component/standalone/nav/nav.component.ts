@@ -18,7 +18,7 @@ export type Direction = 'up'|'down';
         'visible',
         style({opacity: 1, transform: 'translateY(0)'})
       ),
-      transition('* => *', animate('200ms ease-in'))
+      transition('* => *', animate('500ms ease-in'))
     ])
   ],
   imports: [CommonModule, ButtonComponent, BrowserAnimationsModule],
@@ -38,6 +38,9 @@ export class NavComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
+    window.addEventListener('scroll', function() {
+      console.log(window.scrollY);
+    });
     const scroll$ = fromEvent(window, 'scroll').pipe(
       throttleTime(10),
       map(() => window.pageYOffset),

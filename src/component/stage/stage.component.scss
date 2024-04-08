@@ -35,23 +35,27 @@
 
       .stage-headline {
         font-size: var(--title-font-mobile);
+        line-height: var(--title-font-mobile);
         max-width: 87.5%;
         color: var(--title-color);
         font-weight: bold;
+        text-shadow: var(--text-outline-headline);
 
         @media only screen and (min-width: 1025px) {
           max-width: unset;
           font-size: var(--title-font);
+          line-height: var(--title-font);
         }
       }
 
       .stage-text {
+        color: var(--stage-text-color);
         max-width: 87.5%;
         font-size: var(--text-font-mobile);
         @media only screen and (min-width: 1025px) {
           max-width: 45%;
           font-size: var(--text-font);
-          font-weight: 500;
+          font-weight: 600;
         }
       }
 

@@ -1,21 +1,23 @@
 .accordion {
   display: flex;
   flex-flow: column;
-  border: 1px lightslategrey solid;
+  border: 1px var(--secondary-color) solid;
 
   .accordion-label {
     display: flex;
     flex-flow: row nowrap;
     padding: 16px;
-    color: var(--text-color);
-    //border: 1px whitesmoke solid;
-    //border-bottom: none;
+    color: var(--primary-color);
   }
   .accordion-text {
     display: none;
     margin-left: 24px;
     margin-bottom: 16px;
-    color: var(--text-color);
+    color: var(--tertiary-color);
   }
 
+}
+
+.accordion-bg-expanded {
+  background: rgba(141, 157, 184, 0.1);
 }

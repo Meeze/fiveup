@@ -1,8 +1,8 @@
 <div class="text-media">
-  <div class="svg-text-media-icon text-media-image__{{imgOrientation}}" *ngIf="imgOrientation === 'left'">
-    <img class="img-fluid" src="assets/coachingqop.png">
+  <div class="text-media-image" *ngIf="imgOrientation === 'left'">
+    <img class="img-fluid text-media-icon__{{imgOrientation}}" src="{{image}}">
   </div>
-  <div class="text-media--text" >
+  <div [style]="{color: colorOverride}" class="text-media-text text-media-text__{{imgOrientation}}">
     @for (item of lines; track item.toString()) {
       <p>{{item}}</p>
     }
@@ -10,8 +10,8 @@
       <app-button [btnType]="buttonType" [btnLink]="buttonUrl" [btnLabel]="buttonText"></app-button>
     </div>
   </div>
-  <div class="text-media-image__{{imgOrientation}}" *ngIf="imgOrientation === 'right'">
-    <img class="img-fluid" *ngIf="imgOrientation === 'right'" src="https://i.ytimg.com/vi/bkzD190Nk3w/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAI-0GXxCV_s9famMW3okMKRWaslQ">
+  <div class="text-media-image" *ngIf="imgOrientation === 'right'">
+    <img class="img-fluid text-media-icon__{{imgOrientation}}" *ngIf="imgOrientation === 'right'" src="{{image}}">
   </div>
 
 </div>

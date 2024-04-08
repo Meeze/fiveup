@@ -7,6 +7,7 @@ body {
   padding: unset;
   color: var(--text-color);
   font-size: var(--text-font);
+  line-height: calc(var(--text-font) * 1.1);
   outline: var(--title-color);
 }
 
@@ -30,32 +31,29 @@ body {
 }
 
 .container-full {
-  width: 100%;
-  @media only screen and (min-width: 1025px) {
-
-  }
+  padding-bottom: var(--small-margin);
 }
 
 .container-app-medium {
-  padding: var(--small-margin);
+  padding-bottom: var(--small-margin);
   margin-left: var(--container-margin-medium);
   margin-right: var(--container-margin-medium);
 }
 
 .container-app-small {
-  padding: var(--small-margin);
+  padding-bottom: var(--small-margin);
   margin-left: var(--container-margin-small);
   margin-right: var(--container-margin-small);
 }
 
 
 .container-app-large {
-  padding: var(--small-margin);
+  padding-bottom: var(--small-margin);
   margin-left: var(--container-margin-large);
   margin-right: var(--container-margin-large);
 }
 
 .cool-bg {
-  background-image: url("~src/assets/bgtrans75.png");
+  background-image: url("~src/assets/bgdarkened.png");
 }
 

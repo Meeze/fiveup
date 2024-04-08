@@ -35,6 +35,7 @@
 
   .footer-hint--left {
     font-size: var(--footer-hint-font);
+    line-height: var(--footer-hint-font);
     display: flex;
     flex-flow: column;
     align-items: flex-start;
@@ -45,6 +46,7 @@
 
   .footer-hint--right {
     font-size: var(--footer-hint-font);
+    line-height: var(--footer-hint-font);
     display: flex;
     flex-flow: column;
     align-items: flex-end;

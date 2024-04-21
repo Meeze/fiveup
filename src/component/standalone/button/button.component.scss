@@ -2,7 +2,7 @@
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   padding: 6px 8px 6px 8px;
   margin: 6px 8px 6px 8px;
-  border-radius: 3px;
+  border-radius: var(--button-border-radius);
   font-size: var(--button-font-size);
   font-weight: var(--button-font-weight);
   text-align: center;
@@ -21,11 +21,24 @@
     color: var(--primary-btn-text-color);
     background-color: var(--primary-btn-bg-color);
     border: 1px solid var(--primary-btn-border-color);
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: var(--primary-btn-text-color);
+      background-color: var(--tertiary-color);
+      border: 1px solid var(--tertiary-color);
+    }
   }
   &--secondary {
     color: var(--secondary-btn-text-color);
     background-color: var(--secondary-btn-bg-color);
     border: 1px solid var(--secondary-btn-border-color);
+
+    &:hover {
+      text-decoration: underline;
+      text-decoration-color: var(--primary-btn-text-color);
+      border: 1px solid var(--tertiary-color);
+      background-color: var(--tertiary-color);
+    }
   }
 
 }

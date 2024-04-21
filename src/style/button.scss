@@ -1,10 +1,11 @@
 :root {
-  --primary-btn-bg-color: #FF7F50;
+  --primary-btn-bg-color: var(--primary-color);
   --primary-btn-text-color: #07041f;
-  --primary-btn-border-color: #FF7F50;
-  --secondary-btn-bg-color: #89a6d6;
+  --primary-btn-border-color: var(--primary-color);
+  --secondary-btn-bg-color: var(--secondary-color);
   --secondary-btn-text-color: #07041f;
-  --secondary-btn-border-color: #89a6d6;
+  --secondary-btn-border-color: var(--secondary-color);
   --button-font-size: 16px;
   --button-font-weight: 800;
+  --button-border-radius: 4px;
 }

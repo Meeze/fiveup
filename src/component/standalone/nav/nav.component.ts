@@ -30,17 +30,19 @@ export type Direction = 'up'|'down';
 export class NavComponent implements AfterViewInit {
 
   private isVisible = true;
-  pages: Page[] = [{title: 'Home'}, {title: 'Stats'}, {title: 'Info'}, {title: 'Faq'}, {title: 'Impress'}]
+  pages: Page[] = [{title: 'Home', y: 0}, {title: 'Stats', y: 650}, {title: 'Info', y: 800}, {title: 'Faq', y: 2000}, {title: 'Impress'}]
 
   @HostBinding('@toggle')
   get toggle(): VisibilityState {
     return this.isVisible ? 'visible' : 'hidden';
   }
 
+  scrollTo(y = 0 ) {
+    window.scrollTo(0, y);
+    console.log(y);
+  }
+
   ngAfterViewInit() {
-    window.addEventListener('scroll', function() {
-      console.log(window.scrollY);
-    });
     const scroll$ = fromEvent(window, 'scroll').pipe(
       throttleTime(10),
       map(() => window.pageYOffset),

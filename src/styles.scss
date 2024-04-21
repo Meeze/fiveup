@@ -19,6 +19,17 @@ body {
   //background: cyan;
 }
 
+.link {
+  text-decoration: underline;
+  text-decoration-color: darken(#70A7C2FF, 30%);
+  text-align: center;
+  font-size: var(--text-font);
+  line-height: var(--text-font);
+}
+
+.link:hover {
+  color: var(--primary-color)
+}
 
 .show-me {
   border: unset !important;

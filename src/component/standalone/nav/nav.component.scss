@@ -1,5 +1,6 @@
 .navbar {
   display: none;
+  z-index: 9999999;
   @media only screen and (min-width: 1025px) {
     display: revert;
     width: 100%;

@@ -4,7 +4,6 @@
   justify-content: center;
   padding-bottom: var(--medium-margin);
 
-
   .faq-accordion {
 
     @media only screen and (min-width: 1025px) {
@@ -19,7 +18,7 @@
       max-width: 35%;
       display: revert;
       max-height: 600px;
-      align-self: center;
+      align-self: flex-end;
     }
   }
 
@@ -27,8 +26,8 @@
     font-size: var(--title-font);
     line-height: var(--title-font);
     text-shadow: var(--text-outline-headline);
+    padding-bottom: var(--build-unit);
     text-align: center;
     color: var(--title-color);
-    margin-bottom: var(--medium-margin);
   }
 }

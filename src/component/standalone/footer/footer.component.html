@@ -1,16 +1,22 @@
 <div class="footer">
   <div class="footer-item">
-    <div class="footer-hint--left">Impress</div>
+    <div (click)="openModal('Impress')" class="modal-keep-open footer-hint--left">
+      <div class="footer-text modal-keep-open">Impress Page</div>
+      <div class="footer-subtext modal-keep-open link">click to view</div>
+    </div>
   </div>
   <div class="footer-item">
-    <img src="assets/icons/instagram.svg">
-    <img src="assets/icons/patreon.png">
-    <img src="assets/icons/twitch.svg">
-    <img src="assets/icons/discord.png">
-    <img src="assets/icons/youtube.svg">
-    <img src="assets/icons/x.jpg">
+    <img class="footer-icon" src="assets/icons/instagram.svg">
+    <img class="footer-icon" src="assets/icons/patreon.png">
+    <img class="footer-icon" src="assets/icons/yt.svg">
+    <img class="footer-icon" src="assets/icons/discord.png">
+    <img class="footer-icon" src="assets/icons/twitch.svg">
+    <img class="footer-icon" src="assets/icons/x.jpg">
   </div>
   <div class="footer-item">
-    <div class="footer-hint--right">Made by MX Media <br> check us out (X)</div>
+    <div (click)="openModal('MxMedia')" class="modal-keep-open footer-hint--right">
+      <div class="footer-text modal-keep-open">by MxMedia</div>
+      <div class="footer-subtext modal-keep-open link">click to contact</div>
+    </div>
   </div>
 </div>

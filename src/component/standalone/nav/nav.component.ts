@@ -30,7 +30,7 @@ export type Direction = 'up'|'down';
 export class NavComponent implements AfterViewInit {
 
   private isVisible = true;
-  pages: Page[] = [{title: 'Home', y: 0}, {title: 'Stats', y: 650}, {title: 'Info', y: 800}, {title: 'Faq', y: 2000}, {title: 'Impress'}]
+  pages: Page[] = [{title: 'Home', y: 0}, {title: 'Stats', y: 650}, {title: 'Info', y: 800}, {title: 'Faq', y: 2300}, {title: 'Impress', y: 2750}]
 
   @HostBinding('@toggle')
   get toggle(): VisibilityState {
@@ -48,7 +48,6 @@ export class NavComponent implements AfterViewInit {
       map(() => window.pageYOffset),
       pairwise(),
       map(([y1, y2]): Direction => (y2 < y1 ? 'up' : 'down')),
-      distinctUntilChanged(),
       share()
     );
 
@@ -60,7 +59,13 @@ export class NavComponent implements AfterViewInit {
       filter(direction => direction === 'down')
     );
 
-    goingUp$.subscribe(() => (this.isVisible = true));
+    goingUp$.subscribe(() => {
+      // @ts-ignore
+      if(window.scrollY > this.pages.at(3).y || this.isVisible) {
+        return;
+      }
+      this.isVisible = true
+    });
     goingDown$.subscribe(() => (this.isVisible = false));
   }
 

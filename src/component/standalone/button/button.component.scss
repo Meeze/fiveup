@@ -1,17 +1,20 @@
 .basic-button {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-  padding: 6px 8px 6px 8px;
-  margin: 6px 8px 6px 8px;
-  border-radius: var(--button-border-radius);
+  padding: 8px;
+  margin: 6px 0;
   font-size: var(--button-font-size);
+  border-radius: var(--button-border-radius);
   font-weight: var(--button-font-weight);
   text-align: center;
   text-transform: uppercase;
   text-decoration:none;
   border: none;
-  width: 100%;
   outline: none;
-
+  width: inherit;
+  height: 100%;
+  &:hover {
+    color: var(--fifth-color);
+  }
 
   &--default {
 
@@ -22,10 +25,11 @@
     background-color: var(--primary-btn-bg-color);
     border: 1px solid var(--primary-btn-border-color);
     &:hover {
+      cursor: pointer;
       text-decoration: underline;
-      text-decoration-color: var(--primary-btn-text-color);
-      background-color: var(--tertiary-color);
-      border: 1px solid var(--tertiary-color);
+      text-decoration-color: var(--quart-color);
+      background-color: var(--quart-color);
+      border: 1px solid var(--quart-color);
     }
   }
   &--secondary {
@@ -34,8 +38,9 @@
     border: 1px solid var(--secondary-btn-border-color);
 
     &:hover {
+      cursor: pointer;
       text-decoration: underline;
-      text-decoration-color: var(--primary-btn-text-color);
+      text-decoration-color: var(--tertiary-color);
       border: 1px solid var(--tertiary-color);
       background-color: var(--tertiary-color);
     }

@@ -1,0 +1,63 @@
+.animated-underglow {
+  position: relative;
+  background-color: var(--transparent-black-055);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .01);
+
+  &::after {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    top: 5px;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    transform: scale(1) translateZ(0);
+    background: linear-gradient(
+        to left,
+        var(--primary-color),
+        var(--quart-color),
+        var(--secondary-color),
+        var(--quart-color),
+        #970d1e,
+    );
+    background-size: 200% 200%;
+    animation: animateGlow 1.25s linear infinite;
+  }
+}
+
+@keyframes animateGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.zoom {
+  @media only screen and (min-width: 1025px) {
+    transition: transform .2s; /* Animation */
+    margin: 0 auto;
+  }
+}
+
+.zoom:hover {
+  @media only screen and (min-width: 1025px) {
+    transform: scale(1.33); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+}
+
+.placerholder-gradient {
+  background-color: var(--bg-color);
+  background: linear-gradient(30deg, var(--secondary-color), var(--bg-color), var(--transparent-black-055), var(--bg-color)),
+  linear-gradient(180deg, var(--transparent-black-085), var(--bg-color), var(--secondary-color), var(--bg-color)),
+  linear-gradient(50deg, var(--bg-color), var(--transparent-black-085), var(--bg-color), var(--bg-color)),
+  linear-gradient(111deg, var(--bg-color), var(--bg-color), var(--transparent-black-055), var(--bg-color)),
+  linear-gradient(145deg, var(--transparent-black-085), var(--bg-color), var(--transparent-black-085), var(--bg-color)),
+  linear-gradient(123deg, var(--bg-color), var(--secondary-color), var(--bg-color), var(--bg-color)),
+  linear-gradient(210deg, var(--bg-color), var(--transparent-black-085), var(--transparent-black-055), var(--secondary-color));
+  display: flex;
+  width: inherit;
+  height: 12.5vh;
+}

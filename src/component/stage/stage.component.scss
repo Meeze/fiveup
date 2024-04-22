@@ -1,6 +1,5 @@
 .stage {
-
-  margin-bottom: var(--small-margin);
+  overflow: hidden;
 
   &.-image {
     position: relative;
@@ -10,7 +9,7 @@
     display: block;
     object-fit: cover;
     width: 100%;
-    height: calc(100vh + 48px);
+    height: calc(100vh);
   }
 
   .overlay {
@@ -20,66 +19,132 @@
   .overlay_0 {
     left: 12.5vw;
     top: 12.5vh;
-    @media only screen and (min-width: 1025px) {
-      left: 8vw;
-      top: 25vh;
+    @media only screen and (min-width: 661px) {
+      left: 7.5vw;
+      top: 15vh;
       padding: .5rem;
       margin: 4px;
+    }
+    @media only screen and (min-width: 1025px) {
+      left: 7.5vw;
+      top: 20vh;
+    }
+    @media only screen and (min-width: 1981px) {
+      left: 6vw;
+      top: 20vh;
     }
 
     &--content {
       display: flex;
       flex-flow: column;
-      width: calc(92vw - var(--medium-margin));
+      width: calc(90vw - var(--medium-margin));
       align-items: flex-start;
+      gap: calc(var(--build-unit) * 2);
 
       .stage-headline {
         font-size: var(--title-font-mobile);
         line-height: var(--title-font-mobile);
-        max-width: 87.5%;
-        color: var(--title-color);
-        font-weight: bold;
+        width: inherit;
+        color: var(--stage-headline-color);
+        font-weight: 700;
         text-shadow: var(--text-outline-headline);
-
+        @media only screen and (min-width: 661px) {
+          max-width: unset;
+          font-size: calc(var(--title-font) * 1.25);
+          line-height: calc(var(--title-font) * 1.25);
+          gap: calc(var(--build-unit));
+        }
         @media only screen and (min-width: 1025px) {
           max-width: unset;
-          font-size: var(--title-font);
-          line-height: var(--title-font);
+          font-size: calc(var(--title-font) * 1.5);
+          line-height: calc(var(--title-font) * 1.5);
+          gap: var(--build-unit)
         }
-      }
-
-      .stage-text {
-        color: var(--stage-text-color);
-        max-width: 87.5%;
-        font-size: var(--text-font-mobile);
-        @media only screen and (min-width: 1025px) {
-          max-width: 45%;
-          font-size: var(--text-font);
-          font-weight: 600;
+        @media only screen and (min-width: 1981px) {
+          max-width: unset;
+          font-size: calc(var(--title-font) * 1.75);
+          line-height: calc(var(--title-font) * 1.75);
+          gap: calc(var(--build-unit) * 2);
         }
       }
 
       .stage-cta {
-        font-size: var(--text-font-mobile);
+        font-size: var(--button-font-size);
+        line-height: var(--button-font-size);
         display: flex;
         flex-flow: column;
-        align-items: center;
-        width: 87.5%;
+        width: inherit;
 
         .stage-button {
-          width: 66%;
+          min-height: 64px;
+        }
+
+        @media only screen and (min-width: 661px) {
+          display: flex;
+          flex-flow: row wrap;
+          font-size: calc(var(--button-font-size) * 1.11);
+          line-height: calc(var(--button-font-size) * 1.11);
+          gap: calc(var(--build-unit) * 2);
+          .stage-button {
+            width: 48.5vw;
+          }
         }
 
         @media only screen and (min-width: 1025px) {
-          flex-flow: row wrap;
-          justify-content: flex-start;
-          max-width: 45%;
-          font-size: var(--text-font);
-          gap: var(--small-margin);
-
+          display: flex;
+          flex-flow: row nowrap;
+          font-size: calc(var(--button-font-size) * 1.33);
+          line-height: calc(var(--button-font-size) * 1.33);
+          gap: calc(var(--build-unit) * 3);
           .stage-button {
-            width: revert;
+            width: 20vw;
           }
+        }
+
+        @media only screen and (min-width: 1981px) {
+          display: flex;
+          flex-flow: row nowrap;
+          font-size: calc(var(--button-font-size) * 1.5);
+          line-height: calc(var(--button-font-size) * 1.5);
+          gap: calc(var(--build-unit) * 4);
+          .stage-button {
+            width: 12.5vw;
+            max-width: 250px;
+          }
+        }
+      }
+
+      .stage-text {
+        display: flex;
+        flex-flow: column;
+        color: var(--stage-text-color);
+        font-size: var(--text-font-mobile);
+        line-height: var(--text-font-mobile);
+        text-shadow: var(--text-outline-default);
+        width: inherit;
+
+        @media only screen and (min-width: 661px) {
+          max-width: 75%;
+          font-size: calc(var(--text-font) * 1.25);
+          line-height: calc(var(--text-font) * 1.25);
+          gap: var(--build-unit);
+        }
+
+        @media only screen and (min-width: 1025px) {
+          justify-self: flex-start;
+          align-self: flex-start;
+          max-width: 66%;
+          font-size: calc(var(--text-font) * 1.75);
+          line-height: calc(var(--text-font) * 1.75);
+          font-weight: 600;
+          gap: calc(var(--build-unit) * 2);
+        }
+
+        @media only screen and (min-width: 1981px) {
+          max-width: 55%;
+          font-size: calc(var(--text-font) * 2.1);
+          line-height: calc(var(--text-font) * 2.1);
+          gap: calc(var(--build-unit) * 2);
         }
       }
     }

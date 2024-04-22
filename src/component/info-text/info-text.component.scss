@@ -2,7 +2,22 @@
   display: flex;
   flex-flow: column;
   align-items: center;
-  gap: var(--large-margin);
-  margin-bottom: var(--small-margin);
+  gap: var(--medium-margin);
+  font-size: var(--text-font-mobile);
+  line-height: var(--text-font-mobile);
+
+  @media only screen and (min-width: 661px) {
+    font-size: calc(var(--text-font));
+    line-height: calc(var(--text-font));
+  }
+  @media only screen and (min-width: 1025px) {
+    font-size: calc(var(--text-font)*1.33);
+    line-height: calc(var(--text-font)*1.33);
+  }
+  @media only screen and (min-width: 1981px) {
+    font-size: calc(var(--text-font)*1.66);
+    line-height: calc(var(--text-font)*1.66);
+  }
+
 
 }

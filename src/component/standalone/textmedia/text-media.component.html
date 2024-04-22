@@ -1,5 +1,5 @@
-<div class="text-media">
-  <div class="text-media-image" *ngIf="imgOrientation === 'left'">
+<div class="text-media text-media__{{imgOrientation}}">
+  <div class="text-media-image " *ngIf="imgOrientation === 'left'">
     <img class="img-fluid text-media-icon__{{imgOrientation}}" src="{{image}}">
   </div>
   <div [style]="{color: colorOverride}" class="text-media-text text-media-text__{{imgOrientation}}">
@@ -7,11 +7,11 @@
       <p>{{item}}</p>
     }
     <div class="text-media-button">
-      <app-button [btnType]="buttonType" [btnLink]="buttonUrl" [btnLabel]="buttonText"></app-button>
+      <app-button [class]="'basic-button-cont'" [btnType]="buttonType" [btnLink]="buttonUrl" [btnLabel]="buttonText"></app-button>
     </div>
   </div>
-  <div class="text-media-image" *ngIf="imgOrientation === 'right'">
-    <img class="img-fluid text-media-icon__{{imgOrientation}}" *ngIf="imgOrientation === 'right'" src="{{image}}">
+  <div class="text-media-image animated-underglow" *ngIf="imgOrientation === 'right'">
+    <img class=" img-fluid text-media-icon__{{imgOrientation}}" *ngIf="imgOrientation === 'right'" src="{{image}}">
   </div>
 
 </div>

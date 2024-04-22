@@ -1,16 +1,47 @@
 :root {
-  --primary-color: hsl(20, 90%, 60%);
-  --secondary-color: hsl(210 85% 60%);;
-  --tertiary-color: hsl(67 80% 60%);
+  --primary-color: #5214A0FF;
+  --secondary-color: hsl(225 100% 82% / 1);
+  --tertiary-color: hsla(225, 100%, 90%, 1);
+  --tertiary-color-trans: hsla(225, 100%, 90%, 0.33);
+  --quart-color: #c895ea;
+  --fifth-color: hsl(333, 92%, 24%);
+  --a-color: rgba(162, 55, 222, 0.1);
+  --b-color: hsl(0, 78%, 35%);
   --build-unit: 8px;
   --border-radius: 8px;
-  --bg-color: #000316;
-  --title-color: var(--primary-color);
+  --title-color: var(--b-color);
   --text-color: var(--secondary-color);
-  --text-outline-nav: -0.75px -0.75px 0 var(--bg-color), 0.75px -0.75px 0 var(--bg-color), -0.75px 0.75px 0 var(--bg-color), 0.75px 0.75px 0 var(--bg-color);
-  --text-outline-headline: -0.75px -0.75px 0 var(--bg-color), 0.75px -0.75px 0 var(--bg-color), -0.75px 0.75px 0 var(--bg-color), 0.75px 0.75px 0 var(--bg-color);
+  --bg-color: rgba(22, 5, 40, 1);
+  --transparent-black-055: rgba(22, 5, 40, 0.55);
+  --transparent-black-085: rgba(22, 5, 40, 0.85);
+  --text-outline-nav: -0.84px -0.84px 0 var(--bg-color), 0.84px -0.84px 0 var(--bg-color), -0.84px 0.84px 0 var(--bg-color), 0.84px 0.84px 0 var(--bg-color);
+  --text-outline-headline: -1px -1px 0 var(--bg-color), 1px -1px 0 var(--bg-color), -1px 1px 0 var(--bg-color), 1px 1px 0 var(--bg-color);
+  --text-outline-default: -0.75px -0.75px 0 var(--bg-color), 0.75px -0.75px 0 var(--bg-color), -0.75px 0.75px 0 var(--bg-color), 0.75px 0.75px 0 var(--bg-color);
   --stage-text-color: var(--secondary-color);
-  --large-margin: 64px;
-  --medium-margin: 32px;
-  --small-margin: 16px;
+  --stage-headline-color: var(--primary-color);
+  --accordion-label-color: var(--tertiary-color);
+  --accordion-label-hover-color: var(--quart-color);
+  --accordion-label-hover-bg-color: var(--quart-color);
+  --accordion-text-hover-color: var(--secondary-color);
+  --accordion-text-color: var(--tertiary-color);
+  --accordion-text-hover-bg-color: var(--tertiary-color-trans);
+  --large-margin: 128px;
+  --medium-margin: 64px;
+  --small-margin: 32px;
+
+  --yellow: #ffffa3;
+  --lightblue: hsl(195, 67%, 67%);
+  --med-blue:hsl(225, 67%, 67%);
+  --red-pink: hsl(0, 67%, 67%);
+
+}
+
+.s-margin-top {
+  margin-top: var(--small-margin);
+}
+.m-margin-top {
+  margin-top: var(--medium-margin);
+}
+.x-margin-top {
+  margin-top: var(--large-margin);
 }

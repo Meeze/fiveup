@@ -1,13 +1,82 @@
 .text-media {
   display: flex;
   flex-flow: column;
+  font-size: calc(var(--text-font-mobile) *1);
+  line-height: calc(var(--text-font-mobile) *1);
+  gap: calc(var(--build-unit)*2);
+
+  @media only screen and (min-width: 661px) {
+    flex-flow: row;
+    justify-content: flex-start;
+    font-size: calc(var(--text-font) *1.15);
+    line-height: calc(var(--text-font) *1.15);
+
+  }
+
+  @media only screen and (min-width: 1025px) {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    font-size: calc(var(--text-font)*1.4);
+    line-height: calc(var(--text-font)*1.4);
+  }
+
+  @media only screen and (min-width: 1981px) {
+    font-size: calc(var(--text-font) * 1.66);
+    line-height: calc(var(--text-font) * 1.66);
+  }
+
+
+  &__left {
+    flex-flow: column;
+  }
+
+  &__right {
+    flex-flow: column-reverse;
+  }
+
   @media only screen and (min-width: 1025px) {
     flex-flow: row nowrap;
   }
 
   .text-media-button {
-    max-width: 12.5vw;
-    margin-left: 33%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    font-size: calc(var(--button-font-size) *1);
+    line-height: calc(var(--button-font-size) *1);
+    width: 100%;
+
+    @media only screen and (min-width: 661px) {
+      display: flex;
+      flex-flow: row;
+      font-size: calc(var(--button-font-size) *1.15);
+      line-height: calc(var(--button-font-size) *1.15);
+      .basic-button-cont {
+        width: 12.5vw;
+      }
+
+    }
+    @media only screen and (min-width: 1025px) {
+      display: flex;
+      flex-flow: row;
+      font-size: calc(var(--button-font-size) *1.4);
+      line-height: calc(var(--button-font-size) *1.4);
+      .basic-button-cont {
+        width: 15vw;
+      }
+
+    }
+    @media only screen and (min-width: 1981px) {
+      display: flex;
+      flex-flow: row;
+      font-size: calc(var(--button-font-size) *1.66);
+      line-height: calc(var(--button-font-size) *1.66);
+
+      .basic-button-cont {
+        width: 17.5vw;
+      }
+    }
   }
 
   .text-media-text {
@@ -16,14 +85,16 @@
   }
 
   .text-media-text__left {
+    text-align: left;
     @media only screen and (min-width: 1025px) {
-      max-width: 60%;
+
     }
   }
 
   .text-media-text__right {
+    text-align: right;
     @media only screen and (min-width: 1025px) {
-      max-width: 60%;
+
     }
   }
 
@@ -34,16 +105,27 @@
     align-items: center;
   }
 
+
   .text-media-icon {
     &__left {
-
       @media only screen and (min-width: 1025px) {
-        padding-right: var(--medium-margin);
+        width: 250px;
+        height: auto;
+      }
+      @media only screen and (min-width: 1981px) {
+        width: 400px;
+        height: auto;
       }
     }
+
     &__right {
       @media only screen and (min-width: 1025px) {
-        padding-left: var(--medium-margin);
+        width: 250px;
+        height: auto;
+      }
+      @media only screen and (min-width: 1981px) {
+        width: 470px;
+        height: auto;
       }
     }
   }

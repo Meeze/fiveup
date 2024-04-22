@@ -1,36 +1,77 @@
 .navbar {
-  display: none;
+  display: flex;
   z-index: 9999999;
+  width: inherit;
+  position: fixed;
+  height: var(--navbar-height-small);
+  justify-content: space-evenly;
+  border-bottom: solid 2px var(--nav-bottom-color);
+  background-color: var(--bg-color);
+  background:
+    linear-gradient(120deg, var(--bg-color), var(--secondary-color), var(--transparent-black-055), var(--bg-color)),
+    linear-gradient(240deg, var(--secondary-color), var(--bg-color), var(--transparent-black-085), var(--bg-color)),
+    linear-gradient(20deg, var(--bg-color), var(--secondary-color), var(--bg-color), var(--secondary-color)),
+    linear-gradient(180deg, var(--secondary-color), var(--bg-color), var(--transparent-black-055), var(--bg-color)),
+  linear-gradient(360deg, var(--transparent-black-085), var(--bg-color), var(--secondary-color), var(--bg-color)),
+  linear-gradient(30deg, var(--secondary-color), var(--transparent-black-085), var(--secondary-color), var(--bg-color)),
+  linear-gradient(180deg, var(--bg-color), var(--transparent-black-085), var(--transparent-black-055), var(--secondary-color));
+
+  ;
+
+  .nav-points {
+    width: inherit;
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    gap: calc(var(--build-unit));
+
+  }
+
   @media only screen and (min-width: 1025px) {
-    display: revert;
-    width: 100%;
-    background: transparent;
-    position: fixed;
-    height: var(--navbar-height);
-    padding-left: 15%;
-    border-bottom: solid 2px var(--nav-bottom-color);
+    height: var(--navbar-height-medium);
 
     .nav-points {
-      width: 66%;
-      list-style: none;
+      width: 70%;
       display: flex;
       flex-flow: row nowrap;
       justify-content: space-between;
-
-      li {
-        font-weight: bold;
-        color: var(--title-color);
-        font-size: var(--nav-font);
-        line-height: var(--nav-font);
-        text-shadow: var(--text-outline-nav);
-      }
+      gap: calc(var(--build-unit) * 1.5);
     }
+  }
 
-    .navbar-logo {
-      height: var(--navbar-height);
-      width: auto;
-      justify-self: left !important;
+  @media only screen and (min-width: 1981px) {
+    height: var(--navbar-height);
+
+    .nav-points {
+      width: 70%;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: calc(var(--build-unit) * 3);
     }
+  }
 
+
+  li {
+    font-weight: 600;
+    color: var(--nav-color);
+    text-shadow: var(--text-outline-nav);
+    font-size: var(--nav-font);
+    line-height: var(--nav-font);
+    text-align: center;
+    @media only screen and (min-width: 661px) {
+      font-size: calc(var(--nav-font) * 1.15);
+    //  line-height: calc(var(--nav-font) * 1.15);
+    }
+    @media only screen and (min-width: 1025px) {
+      font-size: calc(var(--title-font) * 1.33);
+     // line-height: calc(var(--title-font) * 1.45);
+    }
+    @media only screen and (min-width: 1981px) {
+      font-size: calc(var(--title-font) * 1.75);
+      //line-height: calc(var(--title-font) * 1.75 *0.9);
+    }
   }
 }

@@ -7,27 +7,55 @@
   .faq-accordion {
 
     @media only screen and (min-width: 1025px) {
-      width: 65%;
+      width: 60%;
     }
+    @media only screen and (min-width: 1981px) {
+      width: 70%;
+    }
+
     border-radius: 4px;
   }
 
   .faq-image {
     display: none;
     @media only screen and (min-width: 1025px) {
-      max-width: 35%;
+      max-width: 40%;
       display: revert;
-      max-height: 600px;
+      height: 600px;
+      width: auto;
+      align-self: flex-end;
+    }
+    @media only screen and (min-width: 1981px) {
+      max-width: 30%;
+      display: revert;
+      height: 600px;
+      width: auto;
       align-self: flex-end;
     }
   }
 
   .faq-title {
-    font-size: var(--title-font);
-    line-height: var(--title-font);
     text-shadow: var(--text-outline-headline);
     padding-bottom: var(--build-unit);
     text-align: center;
     color: var(--title-color);
+
+    font-size: var(--title-font-mobile);
+    line-height: var(--title-font-mobile);
+
+    @media only screen and (min-width: 661px) {
+      font-size: calc(var(--title-font));
+      line-height: calc(var(--title-font));
+    }
+    @media only screen and (min-width: 1025px) {
+      font-size: calc(var(--title-font)*1.33);
+      line-height: calc(var(--title-font)*1.33);
+    }
+    @media only screen and (min-width: 1981px) {
+      font-size: calc(var(--title-font)*1.66);
+      line-height: calc(var(--title-font)*1.66);
+    }
+
+
   }
 }

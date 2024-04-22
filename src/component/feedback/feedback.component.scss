@@ -1,23 +1,39 @@
 .feedback {
+  width: 100%;
 
-  .feedback-header  {
+  .feedback-header {
+    margin-top: var(--small-margin);
+    margin-bottom: var(--medium-margin);
     text-align: center;
     color: var(--title-color);
-    font-size: var(--title-font);
-    line-height: var(--title-font);
-    margin-bottom: var(--medium-margin);
     text-shadow: var(--text-outline-headline);
+    font-size: var(--title-font-mobile);
+    line-height: var(--title-font-mobile);
+
+    @media only screen and (min-width: 661px) {
+      font-size: calc(var(--title-font));
+      line-height: calc(var(--title-font));
+    }
+    @media only screen and (min-width: 1025px) {
+      font-size: calc(var(--title-font)*1.33);
+      line-height: calc(var(--title-font)*1.33);
+    }
+    @media only screen and (min-width: 1981px) {
+      font-size: calc(var(--title-font)*1.66);
+      line-height: calc(var(--title-font)*1.66);
+    }
+
   }
   .feedback-images {
     display: flex;
     flex-flow: column;
-    gap: var(--medium-margin);
+
     @media only screen and (min-width: 1025px) {
       gap: unset;
       flex-flow: row nowrap;
-      justify-content: space-between;
+      justify-content: space-around;
       .feedback-image {
-        max-width: 30%;
+        max-width: 25%;
       }
     }
     .feedback-image {

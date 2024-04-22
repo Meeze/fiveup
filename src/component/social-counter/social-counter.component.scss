@@ -1,29 +1,63 @@
 .social-counter-outer {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  background-color: var(--bg-color);
+  background: linear-gradient(30deg, var(--secondary-color), var(--bg-color), var(--transparent-black-055), var(--bg-color)),
+  linear-gradient(330deg, var(--transparent-black-085), var(--bg-color), var(--secondary-color), var(--bg-color)),
+  linear-gradient(20deg, var(--bg-color), var(--transparent-black-085), var(--bg-color), var(--bg-color)),
+  linear-gradient(50deg, var(--bg-color), var(--bg-color), var(--transparent-black-055), var(--bg-color)),
+  linear-gradient(222deg, var(--transparent-black-085), var(--bg-color), var(--transparent-black-085), var(--bg-color)),
+  linear-gradient(123deg, var(--bg-color), var(--secondary-color), var(--bg-color), var(--bg-color)),
+  linear-gradient(180deg, var(--bg-color), var(--transparent-black-085), var(--transparent-black-055), var(--secondary-color));
+
+  padding-top: calc(var(--build-unit) * 2);
+  padding-bottom: calc(var(--build-unit) * 2);
+
+  gap: calc(var(--build-unit) * 4);
+
 
   .social-counter-list {
-    gap: var(--small-margin);
     display: flex;
+    flex-flow: column;
+    justify-content: center;
     @media only screen and (min-width: 1025px) {
       flex-flow: row nowrap;
+      gap: calc(var(--build-unit) * 4);
     }
-    flex-flow: column;
+
+    @media only screen and (min-width: 1981px) {
+      flex-flow: row nowrap;
+      gap: calc(var(--build-unit) * 10);
+    }
 
     .social-counter {
       width: 100%;
       @media only screen and (min-width: 1025px) {
-        width: 33%;
+        width: unset;
+        max-width: 33%;
       }
     }
   }
 
-  .social-counter-text {
+  .social-counter-headline {
     text-align: center;
-    font-size: var(--title-font);
-    line-height: var(--title-font);
+    font-size: var(--title-font-mobile);
+    line-height: var(--title-font-mobile);
     text-shadow: var(--text-outline-headline);
     color: var(--title-color);
+    font-weight: 700;
+    @media only screen and (min-width: 661px) {
+      font-size: calc(var(--title-font));
+      line-height: calc(var(--title-font));
+    }
     @media only screen and (min-width: 1025px) {
-      margin-bottom: var(--small-margin);
+      font-size: calc(var(--title-font) * 1.33);
+      line-height: calc(var(--title-font) * 1.33);
+    }
+    @media only screen and (min-width: 1981px) {
+      font-size: calc(var(--title-font) * 1.66);
+      line-height: calc(var(--title-font) * 1.66);
     }
   }
 

@@ -1,11 +1,14 @@
 .modal {
-  top: 132vw;
-  left: 0%;
+  top: 350vh;
   width: 99vw;
   height: 100vh;
   position: absolute;
-  background: rgba(7, 4, 31, 0.55);
+  background: var(--fifth-color);
   z-index: 9999999199;
+
+  @media only screen and (min-width: 661px) {
+    top: 250vh;
+  }
 
   .modal-icon {
     max-width: 32px;
@@ -25,7 +28,7 @@
       justify-content: center;
       width: 100%;
       min-height: 25vh;
-      background: rgba(7, 4, 31, 0.85);
+      background: var(--transparent-black-085);
       overflow-y: auto;
       overflow-x: hidden;
       max-height: 85vh;
@@ -53,11 +56,8 @@
         line-height: var(--text-font);
       }
     }
-
   }
-
 }
-
 .modal-keep-open {
   z-index: 99999;
 }

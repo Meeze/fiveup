@@ -1,15 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 @import "style/variables";
+.site-container {
 
-
+}
+:root {
+  background-blend-mode: color;
+}
 body {
+  box-sizing: border-box;
   margin: unset;
   padding: unset;
   color: var(--text-color);
   font-size: var(--text-font);
-  line-height: calc(var(--text-font) * 1.1);
-  outline: var(--title-color);
-}
+  text-shadow: var(--text-outline-default);
+  line-height: calc(var(--text-font));}
 
 .container {
   width: 100%;
@@ -42,29 +46,43 @@ body {
 }
 
 .container-full {
-  padding-bottom: var(--small-margin);
 }
 
 .container-app-medium {
-  padding-bottom: var(--small-margin);
   margin-left: var(--container-margin-medium);
   margin-right: var(--container-margin-medium);
 }
 
 .container-app-small {
-  padding-bottom: var(--small-margin);
   margin-left: var(--container-margin-small);
   margin-right: var(--container-margin-small);
 }
 
 
 .container-app-large {
-  padding-bottom: var(--small-margin);
+
   margin-left: var(--container-margin-large);
   margin-right: var(--container-margin-large);
 }
 
 .cool-bg {
+  flex-flow: column;
+  width: 100%;
   background-image: url("~src/assets/bgdarkened.png");
+}
+
+.arrow-icon {
+  width: 64px;
+  height: auto;
+  font-weight: 900;
+  pointer-events: none
+}
+
+.rotate-icon-class {
+  transform: rotateZ(90deg);
+}
+
+.rotate-icon-class--revert {
+  transform: rotateZ(-90deg);
 }
 

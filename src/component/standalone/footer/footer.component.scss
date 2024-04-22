@@ -2,31 +2,43 @@
 .footer {
   background-color: var(--footer-color);
   display: flex;
-  flex-flow: column;
+  flex-flow: row;
   align-items: center;
-  padding-top: calc(var(--build-unit) * 3);
+  width: 100%;
+  height: var(--footer-height-small);
+
   @media only screen and (min-width: 1025px) {
-    padding-top: unset;
-    flex-flow: row nowrap;
-    align-content: unset;
+    align-content: center;
+    align-items: center;
+    height: var(--footer-height-medium);
+    justify-content: space-around;
   }
-  height: var(--footer-height);
+  @media only screen and (min-width: 1981px) {
+    height: var(--footer-height-large);
+  }
 
   .footer-item {
     width: 33%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     height: 100%;
 
     .footer-icon {
       align-self: center;
-      max-height: 50px;
-      width: auto;
-    }
-
-    @media only screen and (min-width: 1025px) {
-      justify-content: center;
-      align-items: flex-start;
+      height: auto;
+      width: 40px;
+      @media only screen and (min-width: 661px) {
+        gap: calc(var(--build-unit));
+        height: auto;
+        width: 60px;
+      }
+      @media only screen and (min-width: 1025px) {
+        height: auto;
+        width: 80px;
+        justify-content: center;
+        align-items: center;
+        gap: calc(var(--build-unit)*2);
+      }
     }
   }
 
@@ -37,8 +49,8 @@
     flex-flow: column nowrap;
     font-size: var(--footer-hint-font);
     line-height: var(--footer-hint-font);
-    margin-top: var(--footer-hint-margin-top);
     text-align: center;
+    margin-top: calc(var(--build-unit)*2);
   }
 
   .footer-hint--right {
@@ -46,8 +58,8 @@
     flex-flow: column nowrap;
     font-size: var(--footer-hint-font);
     line-height: var(--footer-hint-font);
-    margin-top: var(--footer-hint-margin-top);
     text-align: center;
+    margin-top: calc(var(--build-unit)*2);
   }
 
 
@@ -59,13 +71,7 @@
   .footer-subtext {
     text-align: center;
     font-size: calc(var(--build-unit) *1.5);
-  }
-
-  img {
-    width: 60px;
-    height: 60px;
-    padding-left: 4px;
-    padding-right: 4px;
+    line-height: calc(var(--build-unit) *1.5);
   }
 
 }

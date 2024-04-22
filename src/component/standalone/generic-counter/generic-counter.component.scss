@@ -2,4 +2,45 @@
   display: flex;
   flex-flow: column;
   text-align: center;
+  .count {
+    color: var(--fifth-color);
+    font-weight: 600;
+    font-size: calc(var(--text-font-mobile));
+    line-height: calc(var(--text-font-mobile));
+    @media only screen and (min-width: 661px) {
+      font-weight: 700;
+      font-size: calc(var(--text-font));
+      line-height: calc(var(--text-font));
+    }
+    @media only screen and (min-width: 1025px) {
+      font-weight: 900;
+      font-size: calc(var(--text-font) * 1.33);
+      line-height: calc(var(--text-font) * 1.33);
+    }
+    @media only screen and (min-width: 1981px) {
+      font-weight: 900;
+      font-size: calc(var(--text-font) * 1.66);
+      line-height: calc(var(--text-font) * 1.66);
+    }
+  }
+
+
+  .counter-title {
+    color: var(--quart-color);
+    font-size: calc(var(--title-font));
+    line-height: calc(var(--title-font));
+    font-weight: 600;
+    @media only screen and (min-width: 661px) {
+      font-size: calc(var(--title-font));
+      line-height: calc(var(--title-font));
+    }
+    @media only screen and (min-width: 1025px) {
+      font-size: calc(var(--title-font) * 1.11);
+      line-height: calc(var(--title-font) * 1.11);
+    }
+    @media only screen and (min-width: 1981px) {
+      font-size: calc(var(--title-font) * 1.33);
+      line-height: calc(var(--title-font) * 1.33);
+    }
+  }
 }

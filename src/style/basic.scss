@@ -1,16 +1,19 @@
 :root {
-  --primary-color: #5214A0FF;
+  --primary-color: #7645b3;
   --secondary-color: hsl(225 100% 82% / 1);
-  --tertiary-color: hsla(225, 100%, 90%, 1);
-  --tertiary-color-trans: hsla(225, 100%, 90%, 0.33);
+  --secondary-color-trans: hsl(225 100% 82% / 0.75);
+  --tertiary-color: hsl(42, 100%, 50%);
   --quart-color: #c895ea;
   --fifth-color: hsl(333, 92%, 24%);
-  --a-color: rgba(162, 55, 222, 0.1);
-  --b-color: hsl(0, 78%, 35%);
+  --a-color: hsl(59, 82%, 85%);
+  --b-color: rgba(22, 5, 40, 1);
+  --c-color: fff;
   --build-unit: 8px;
   --border-radius: 8px;
-  --title-color: var(--b-color);
-  --text-color: var(--secondary-color);
+  --title-color: var(--tertiary-color);
+  --text-color: var(--a-colorcolor);
+  --bg-color-default: var(--secondary-color);
+  --bg-color-trans: var(--secondary-color-trans);
   --bg-color: rgba(22, 5, 40, 1);
   --transparent-black-055: rgba(22, 5, 40, 0.55);
   --transparent-black-085: rgba(22, 5, 40, 0.85);
@@ -33,6 +36,7 @@
   --lightblue: hsl(195, 67%, 67%);
   --med-blue:hsl(225, 67%, 67%);
   --red-pink: hsl(0, 67%, 67%);
+  --red: hsl(0, 100%, 42%);
 
 }
 
@@ -45,3 +49,4 @@
 .x-margin-top {
   margin-top: var(--large-margin);
 }
+

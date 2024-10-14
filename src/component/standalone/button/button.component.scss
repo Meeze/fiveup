@@ -1,5 +1,5 @@
 .basic-button {
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   padding: 8px;
   margin: 6px 0;
   font-size: var(--button-font-size);
@@ -12,9 +12,6 @@
   outline: none;
   width: inherit;
   height: 100%;
-  &:hover {
-    color: var(--fifth-color);
-  }
 
   &--default {
 
@@ -25,9 +22,9 @@
     background-color: var(--primary-btn-bg-color);
     border: 1px solid var(--primary-btn-border-color);
     &:hover {
+      transform: translateY(5%);
       cursor: pointer;
-      text-decoration: underline;
-      text-decoration-color: var(--quart-color);
+      color: var(--primary-color);
       background-color: var(--quart-color);
       border: 1px solid var(--quart-color);
     }
@@ -39,10 +36,10 @@
 
     &:hover {
       cursor: pointer;
-      text-decoration: underline;
-      text-decoration-color: var(--tertiary-color);
-      border: 1px solid var(--tertiary-color);
-      background-color: var(--tertiary-color);
+      color: var(--lightblue);
+      transform: translateY(5%);
+      border: 1px solid var(--med-blue);
+      background-color: var(--med-blue);
     }
   }
 

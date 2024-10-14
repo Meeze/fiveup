@@ -14,12 +14,11 @@ export class AccordionComponent {
   @Input() answer?: string;
   @Input() id: number = -1;
 
-  expandAccordionElement( evt: Event, id:number) {
-    // @ts-ignore
+  expandAccordionElement( evt: MouseEvent, id:number) {
     let cursorX = evt.clientX;
-    // @ts-ignore
     let cursorY = evt.clientY;
     let elem = document.elementFromPoint(cursorX, cursorY)
+
     // @ts-ignore
     const list = document.getElementById(id).classList;
     const accordion = document.getElementsByClassName(id.toString()).item(0);

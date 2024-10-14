@@ -1,8 +1,10 @@
 <div class="feedback container-full">
   <div class="feedback-header">See for yourself what my Clients are saying</div>
   <div class="feedback-images">
-    <img class="zoom feedback-image" src="assets/feedback1.png">
-    <img class="zoom feedback-image" src="assets/feedback2.png">
-    <img class="zoom feedback-image" src="assets/feedback3.png">
+    <ng-image-slider class="image-slider" [images]="imageObject" [infinite]="false"
+                     [autoSlide]="1" [showArrow]="true"
+                     [imageSize]="{width: '40%', height: 600, space: 20}" (imageClick)="click($event)" (lightboxClose)="exit()"
+                     slideImage="1">>
+    </ng-image-slider>
   </div>
 </div>

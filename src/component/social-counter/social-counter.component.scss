@@ -2,15 +2,7 @@
   width: 100%;
   display: flex;
   flex-flow: column;
-  background-color: var(--bg-color);
-  background: linear-gradient(30deg, var(--secondary-color), var(--bg-color), var(--transparent-black-055), var(--bg-color)),
-  linear-gradient(330deg, var(--transparent-black-085), var(--bg-color), var(--secondary-color), var(--bg-color)),
-  linear-gradient(20deg, var(--bg-color), var(--transparent-black-085), var(--bg-color), var(--bg-color)),
-  linear-gradient(50deg, var(--bg-color), var(--bg-color), var(--transparent-black-055), var(--bg-color)),
-  linear-gradient(222deg, var(--transparent-black-085), var(--bg-color), var(--transparent-black-085), var(--bg-color)),
-  linear-gradient(123deg, var(--bg-color), var(--secondary-color), var(--bg-color), var(--bg-color)),
-  linear-gradient(180deg, var(--bg-color), var(--transparent-black-085), var(--transparent-black-055), var(--secondary-color));
-
+  background: var(--bg-color);
   padding-top: calc(var(--build-unit) * 2);
   padding-bottom: calc(var(--build-unit) * 2);
 
@@ -20,7 +12,7 @@
   .social-counter-list {
     display: flex;
     flex-flow: column;
-    justify-content: center;
+    justify-content: space-evenly;
     @media only screen and (min-width: 1025px) {
       flex-flow: row nowrap;
       gap: calc(var(--build-unit) * 4);
@@ -32,10 +24,25 @@
     }
 
     .social-counter {
+      box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px !important;
+      z-index: 9999;
+
+      &:hover {
+        transform: translateY(5%) !important;
+        cursor: pointer;
+
+      }
+
       width: 100%;
+      background: conic-gradient(from 45deg, var(--secondary-color) 10%, var(--primary-color) 30%, var(--secondary-color) 30%),
+      conic-gradient(from 360-45deg, var(--secondary-color) 10%, var(--primary-color) 30%, var(--bg-color) 50%),
+      conic-gradient(from 180deg, var(--secondary-color) 10%, var(--secondary-color) 30%, var(--bg-color) 30%),
+      linear-gradient(to bottom, var(--secondary-color) 25%, var(--primary-color) 10%, var(--secondary-color) 45%),
+      linear-gradient(to top right, var(--secondary-color) 25%, var(--primary-color) 10%, var(--bg-color) 45%);
       @media only screen and (min-width: 1025px) {
-        width: unset;
-        max-width: 33%;
+        width: fit-content(100%);
+        max-width: 32%;
+        min-width: 150px;
       }
     }
   }

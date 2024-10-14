@@ -2,12 +2,13 @@
   position: relative;
   background-color: var(--transparent-black-055);
   box-shadow: 0 0 0 1px rgba(0, 0, 0, .01);
+  border-radius: 0 0  var(--border-radius) var(--border-radius);
 
   &::after {
     position: absolute;
     content: "";
     z-index: -1;
-    top: 5px;
+    top: 0;
     left: 0;
     right: 0;
     height: 100%;
@@ -16,10 +17,10 @@
     background: linear-gradient(
         to left,
         var(--primary-color),
-        var(--quart-color),
         var(--secondary-color),
-        var(--quart-color),
-        #970d1e,
+        var(--tertiary-color),
+        var(--fifth-color),
+        var(--a-color),
     );
     background-size: 200% 200%;
     animation: animateGlow 1.25s linear infinite;

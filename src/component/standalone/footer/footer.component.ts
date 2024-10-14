@@ -13,7 +13,7 @@ export type ModalType = 'MxMedia' | 'Impress';
 export class FooterComponent {
 
   openModal(modalType: ModalType) {
-    if (document.getElementsByClassName("modal").length > 0) {
+    if (document.getElementsByClassName("modal").length >= 1) {
       return;
     }
 

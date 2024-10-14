@@ -1,7 +1,17 @@
+.accordion-label:last-child {
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.accordion-label:last-of-type {
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
 .accordion {
   display: flex;
   flex-flow: column;
-  border: 1.5px var(--transparent-black-085) solid;
+ // border: 1.5px var(--transparent-black-085) solid;
+
+
 
   .accordion-label {
     display: flex;
@@ -38,8 +48,9 @@
       cursor: pointer;
       background-color: var(--accordion-label-hover-bg-color);
       color: var(--accordion-label-hover-color);
-      border: 1px solid var(--accordion-label-hover-bg-color);
+      //border: 1px solid var(--accordion-label-hover-bg-color);
     }
+
 
   }
   .accordion-text {
@@ -76,12 +87,12 @@
 .accordion-bg-expanded {
   color: var(--fifth-btn-text-color);
   background-color: var(--bg-color);
-  background: linear-gradient(10deg, var(--fifth-color), var(--bg-color), var(--transparent-black-055), var(--bg-color)),
-  linear-gradient(330deg, var(--transparent-black-085), var(--bg-color), var(--fifth-color), var(--bg-color)),
+  background: linear-gradient(30deg, var(--secondary-color), var(--bg-color), var(--transparent-black-055), var(--bg-color)),
+  linear-gradient(330deg, var(--transparent-black-085), var(--bg-color), var(--secondary-color), var(--bg-color)),
   linear-gradient(20deg, var(--bg-color), var(--transparent-black-085), var(--bg-color), var(--bg-color)),
   linear-gradient(50deg, var(--bg-color), var(--bg-color), var(--transparent-black-055), var(--bg-color)),
   linear-gradient(222deg, var(--transparent-black-085), var(--bg-color), var(--transparent-black-085), var(--bg-color)),
-  linear-gradient(123deg, var(--bg-color), var(--fifth-color), var(--bg-color), var(--bg-color)),
-  linear-gradient(180deg, var(--bg-color), var(--transparent-black-085), var(--transparent-black-055), var(--fifth-color));
-
+  linear-gradient(123deg, var(--bg-color), var(--secondary-color), var(--bg-color), var(--bg-color)),
+  linear-gradient(180deg, var(--bg-color), var(--transparent-black-085), var(--transparent-black-055), var(--secondary-color));
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
 }

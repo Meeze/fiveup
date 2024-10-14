@@ -13,7 +13,17 @@
       width: 70%;
     }
 
-    border-radius: 4px;
+    border-radius: var(--border-radius);
+
+    .bottom-container {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      justify-items: center;
+      align-items: center;
+      width: 100%;
+    }
+
   }
 
   .faq-image {
@@ -34,7 +44,12 @@
     }
   }
 
+  .faq-text {
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+  }
+
   .faq-title {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
     text-shadow: var(--text-outline-headline);
     padding-bottom: var(--build-unit);
     text-align: center;

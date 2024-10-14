@@ -1,5 +1,20 @@
 .feedback {
   width: 100%;
+  display: flex;
+  flex-flow: column;
+  background: linear-gradient(360deg, var(--secondary-color), var(--bg-color), var(--transparent-black-055), var(--bg-color)),
+  linear-gradient(330deg, var(--transparent-black-085), var(--bg-color), var(--secondary-color), var(--bg-color)),
+  linear-gradient(240deg, var(--bg-color), var(--transparent-black-085), var(--bg-color), var(--bg-color)),
+  linear-gradient(180deg, var(--bg-color), var(--bg-color), var(--transparent-black-055), var(--bg-color)),
+  linear-gradient(120deg, var(--transparent-black-085), var(--bg-color), var(--transparent-black-085), var(--bg-color)),
+  linear-gradient(50deg, var(--bg-color), var(--secondary-color), var(--bg-color), var(--bg-color)),
+  linear-gradient(10deg, var(--bg-color), var(--transparent-black-085), var(--transparent-black-055), var(--secondary-color));
+
+  padding-top: calc(var(--build-unit) * 2);
+  padding-bottom: calc(var(--build-unit) * 2);
+
+  gap: calc(var(--build-unit) * 4);
+
 
   .feedback-header {
     margin-top: var(--small-margin);
@@ -15,30 +30,27 @@
       line-height: calc(var(--title-font));
     }
     @media only screen and (min-width: 1025px) {
-      font-size: calc(var(--title-font)*1.33);
-      line-height: calc(var(--title-font)*1.33);
+      font-size: calc(var(--title-font) * 1.33);
+      line-height: calc(var(--title-font) * 1.33);
     }
     @media only screen and (min-width: 1981px) {
-      font-size: calc(var(--title-font)*1.66);
-      line-height: calc(var(--title-font)*1.66);
+      font-size: calc(var(--title-font) * 1.66);
+      line-height: calc(var(--title-font) * 1.66);
     }
 
+
+
+
   }
+
   .feedback-images {
     display: flex;
     flex-flow: column;
+    width: inherit;
 
-    @media only screen and (min-width: 1025px) {
-      gap: unset;
-      flex-flow: row nowrap;
-      justify-content: space-around;
-      .feedback-image {
-        max-width: 25%;
-      }
-    }
-    .feedback-image {
-      width: 100%;
-      height: auto;
+    .image-slider {
+      width: inherit;
+      flex-flow: column;
     }
   }
 }

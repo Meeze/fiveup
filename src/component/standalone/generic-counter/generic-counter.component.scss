@@ -27,20 +27,20 @@
 
   .counter-title {
     color: var(--quart-color);
-    font-size: calc(var(--title-font));
-    line-height: calc(var(--title-font));
+    font-size: calc(var(--title-font-mobile));
+    line-height: calc(var(--title-font-mobile));
     font-weight: 600;
     @media only screen and (min-width: 661px) {
       font-size: calc(var(--title-font));
       line-height: calc(var(--title-font));
     }
     @media only screen and (min-width: 1025px) {
-      font-size: calc(var(--title-font) * 1.11);
-      line-height: calc(var(--title-font) * 1.11);
+      font-size: calc(var(--title-font) * 1.25);
+      line-height: calc(var(--title-font) * 1.25);
     }
     @media only screen and (min-width: 1981px) {
-      font-size: calc(var(--title-font) * 1.33);
-      line-height: calc(var(--title-font) * 1.33);
+      font-size: calc(var(--title-font) * 1.5);
+      line-height: calc(var(--title-font) * 1.5);
     }
   }
 }

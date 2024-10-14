@@ -4,10 +4,11 @@
 
 }
 :root {
-  background-blend-mode: color;
+  //background-blend-mode: color;
 }
 body {
   box-sizing: border-box;
+  background-clip: border-box;
   margin: unset;
   padding: unset;
   color: var(--text-color);
@@ -40,6 +41,10 @@ body {
   display: revert !important;
 }
 
+.hide-me {
+  display: none !important;
+}
+
 .img-fluid {
   max-width: 100%;
   height: auto;
@@ -68,7 +73,8 @@ body {
 .cool-bg {
   flex-flow: column;
   width: 100%;
-  background-image: url("~src/assets/bgdarkened.png");
+  background-color: var(--secondary-color-trans) ;
+ // background-image: url("~src/assets/bgdarkened.png");
 }
 
 .arrow-icon {

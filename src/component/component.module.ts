@@ -13,6 +13,7 @@ import {InfoTextComponent} from "./info-text/info-text.component";
 import {TextMediaComponent} from "./standalone/textmedia/text-media.component";
 import {FooterComponent} from "./standalone/footer/footer.component";
 import {ButtonComponent} from "./standalone/button/button.component";
+import {NgImageSliderModule} from "ng-image-slider";
 
 
 
@@ -31,7 +32,8 @@ import {ButtonComponent} from "./standalone/button/button.component";
     FaqComponent,
     FeedbackComponent,
     SocialCounterComponent,
-    InfoTextComponent
+    InfoTextComponent,
+    NgImageSliderModule,
   ],
     imports: [
         CommonModule,
@@ -42,6 +44,7 @@ import {ButtonComponent} from "./standalone/button/button.component";
         FooterComponent,
         NavComponent,
         ButtonComponent,
+        NgImageSliderModule,
     ]
 })
 export class ComponentModule { }

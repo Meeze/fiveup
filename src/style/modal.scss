@@ -3,7 +3,7 @@
   width: 99vw;
   height: 100vh;
   position: absolute;
-  background: var(--fifth-color);
+  background: var(--transparent-black-055);
   z-index: 9999999199;
 
   @media only screen and (min-width: 661px) {
@@ -28,7 +28,7 @@
       justify-content: center;
       width: 100%;
       min-height: 25vh;
-      background: var(--transparent-black-085);
+      background: var(--transparent-black-085) !important;
       overflow-y: auto;
       overflow-x: hidden;
       max-height: 85vh;
@@ -56,8 +56,11 @@
         line-height: var(--text-font);
       }
     }
+
   }
+
 }
+
 .modal-keep-open {
   z-index: 99999;
 }
